@@ -291,7 +291,7 @@ class BotcSetup {
 
             dArr[i] = characters[3][iRand];
         }
-        Storyteller.read(dArr[0]);
+        //Storyteller.read(dArr[0]);
         if (Storyteller.search(dArr, "Vigormortis")) {
             if (oCount > 0) {
                 oCount -= 1;
@@ -372,7 +372,7 @@ class BotcSetup {
             if (mod > tCount) {
                 mod = Math.min(tCount, characters[1].length - oCount);
             }
-            Storyteller.read("Outsiders " + oCount + " Townsfolk " + tCount);
+            //Storyteller.read("Outsiders " + oCount + " Townsfolk " + tCount);
             if (tCount - mod > characters[0].length + tAdj) {
                 mod = tCount - (characters[0].length + tAdj); //the problem is ATHEIST!!!
             }
@@ -399,6 +399,8 @@ class BotcSetup {
                 mCount = 0;
                 if (legOut && baseCount[1] > 0) {
                     oCount = rand.nextInt(0, 2);
+                } else {
+                    oCount = 0;
                 }
             }
         }
