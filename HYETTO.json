@@ -1,0 +1,224 @@
+[
+  {
+    "id": "_meta",
+    "name": "New Edition",
+    "almanac": "https://www.bloodstar.xyz/p/Doublewhip/HaveYouEverTriedThisOne/almanac.html"
+  },
+  {
+    "id": "steward_haveyouevertriedthisone",
+    "name": "Steward",
+    "team": "townsfolk"
+  },
+  {
+    "id": "general_haveyouevertriedthisone",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/HaveYouEverTriedThisOne/general_haveyouevertriedthisone.png",
+    "firstNightReminder": "Show the General thumbs up for good winning, thumbs down for evil winning or thumb to the side for neither.",
+    "otherNightReminder": "Show the General thumbs up for good winning, thumbs down for evil winning or thumb to the side for neither.",
+    "name": "General",
+    "team": "townsfolk",
+    "ability": "Each night, you learn which alignment the Storyteller believes is winning: good, evil, or neither.",
+    "firstNight": 11,
+    "otherNight": 5
+  },
+  {
+    "id": "villageidiot_haveyouevertriedthisone",
+    "name": "Village Idiot",
+    "team": "townsfolk"
+  },
+  {
+    "id": "highpreistess_haveyouevertriedthisone",
+    "name": "High Preistess",
+    "team": "townsfolk"
+  },
+  {
+    "id": "king_haveyouevertriedthisone",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/HaveYouEverTriedThisOne/king_haveyouevertriedthisone.png",
+    "firstNightReminder": "Wake the Demon, show them the 'This character selected you' card, show the King token and point to the King player.",
+    "otherNightReminder": "If there are more dead than living, show the King a character token of a living player.",
+    "name": "King",
+    "team": "townsfolk",
+    "ability": "Each night, if the dead outnumber the living, you learn 1 alive character. The Demon knows who you are.",
+    "firstNight": 12,
+    "otherNight": 6
+  },
+  {
+    "id": "monk_haveyouevertriedthisone",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/HaveYouEverTriedThisOne/monk_haveyouevertriedthisone.png",
+    "otherNightReminder": "The previously protected player is no longer protected. The Monk points to a player not themself. Mark that player 'Protected'.",
+    "reminders": [
+      "Protected"
+    ],
+    "name": "Monk",
+    "team": "townsfolk",
+    "ability": "Each night*, choose a player (not yourself): they are safe from the Demon tonight.",
+    "otherNight": 2
+  },
+  {
+    "id": "savant_haveyouevertriedthisone",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/HaveYouEverTriedThisOne/savant_haveyouevertriedthisone.png",
+    "name": "Savant",
+    "team": "townsfolk",
+    "ability": "Each day, you may visit the Storyteller to learn 2 things in private: 1 is true & 1 is false."
+  },
+  {
+    "id": "huntsman_haveyouevertriedthisone",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/HaveYouEverTriedThisOne/huntsman_haveyouevertriedthisone.png",
+    "firstNightReminder": "The Huntsman shakes their head 'no' or points to a player. If they point to the Damsel, wake that player, show the 'You are' card and a not-in-play character token.",
+    "otherNightReminder": "The Huntsman shakes their head 'no' or points to a player. If they point to the Damsel, wake that player, show the 'You are' card and a not-in-play character token.",
+    "reminders": [
+      "No ability"
+    ],
+    "setup": true,
+    "name": "Huntsman",
+    "team": "townsfolk",
+    "ability": "Once per game, at night, choose a living player: the Damsel, if chosen, becomes a not-in-play Townsfolk. [+the Damsel]",
+    "firstNight": 13,
+    "otherNight": 7
+  },
+  {
+    "id": "fisherman_haveyouevertriedthisone",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/HaveYouEverTriedThisOne/fisherman_haveyouevertriedthisone.png",
+    "reminders": [
+      "No ability"
+    ],
+    "name": "Fisherman",
+    "team": "townsfolk",
+    "ability": "Once per game, during the day, visit the Storyteller for some advice to help you win."
+  },
+  {
+    "id": "alchemist_haveyouevertriedthisone",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/HaveYouEverTriedThisOne/alchemist_haveyouevertriedthisone.png",
+    "firstNightReminder": "Show the Alchemist a not-in-play Minion token",
+    "remindersGlobal": [
+      "Is the Alchemist"
+    ],
+    "name": "Alchemist",
+    "team": "townsfolk",
+    "ability": "You have a not-in-play Minion ability.",
+    "firstNight": 14
+  },
+  {
+    "id": "choirboy_haveyouevertriedthisone",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/HaveYouEverTriedThisOne/choirboy_haveyouevertriedthisone.png",
+    "otherNightReminder": "If the King was killed by the Demon, wake the Choirboy and point to the Demon player.",
+    "setup": true,
+    "name": "Choirboy",
+    "team": "townsfolk",
+    "ability": "If the Demon kills the King, you learn which player is the Demon. [+ the King]",
+    "otherNight": 8
+  },
+  {
+    "id": "magician_haveyouevertriedthisone",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/HaveYouEverTriedThisOne/magician_haveyouevertriedthisone.png",
+    "name": "Magician",
+    "team": "townsfolk",
+    "ability": "The Demon thinks you are a Minion. Minions think you are a Demon."
+  },
+  {
+    "id": "poppygrower_haveyouevertriedthisone",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/HaveYouEverTriedThisOne/poppygrower_haveyouevertriedthisone.png",
+    "firstNightReminder": "Do not inform the Demon/Minions who each other are",
+    "otherNightReminder": "If the Poppy Grower has died, show the Minions/Demon who each other are.",
+    "reminders": [
+      "Evil wakes"
+    ],
+    "name": "Poppy Grower",
+    "team": "townsfolk",
+    "ability": "Minions & Demons do not know each other. If you die, they learn who each other are that night.",
+    "firstNight": 15,
+    "otherNight": 9
+  },
+  {
+    "id": "moonchild_haveyouevertriedthisone",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/HaveYouEverTriedThisOne/moonchild_haveyouevertriedthisone.png",
+    "otherNightReminder": "If the Moonchild used their ability to target a player today: If that player is good, they die.",
+    "reminders": [
+      "Dead"
+    ],
+    "name": "Moonchild",
+    "team": "outsider",
+    "ability": "When you learn that you died, publicly choose 1 alive player. Tonight, if it was a good player, they die.",
+    "otherNight": 4
+  },
+  {
+    "id": "politician_haveyouevertriedthisone",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/HaveYouEverTriedThisOne/politician_haveyouevertriedthisone.png",
+    "name": "Politician",
+    "team": "outsider",
+    "ability": "If you were the player most responsible for your team losing, you change alignment & win, even if dead."
+  },
+  {
+    "id": "damsel_haveyouevertriedthisone",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/HaveYouEverTriedThisOne/damsel_haveyouevertriedthisone.png",
+    "firstNightReminder": "Wake all the Minions, show them the 'This character selected you' card and the Damsel token.",
+    "otherNightReminder": "If selected by the Huntsman, wake the Damsel, show 'You are' card and a not-in-play Townsfolk token.",
+    "reminders": [
+      "Guess used"
+    ],
+    "name": "Damsel",
+    "team": "outsider",
+    "ability": "All Minions know you are in play. If a Minion publicly guesses you (once), your team loses.",
+    "firstNight": 16,
+    "otherNight": 10
+  },
+  {
+    "id": "heretic_haveyouevertriedthisone",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/HaveYouEverTriedThisOne/heretic_haveyouevertriedthisone.png",
+    "name": "Heretic",
+    "team": "outsider",
+    "ability": "Whoever wins, loses & whoever loses, wins, even if you are dead."
+  },
+  {
+    "id": "wizard_haveyouevertriedthisone",
+    "name": "Wizard",
+    "team": "minion"
+  },
+  {
+    "id": "harpy_haveyouevertriedthisone",
+    "name": "Harpy",
+    "team": "minion"
+  },
+  {
+    "id": "goblin_haveyouevertriedthisone",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/HaveYouEverTriedThisOne/goblin_haveyouevertriedthisone.png",
+    "reminders": [
+      "Claimed"
+    ],
+    "name": "Goblin",
+    "team": "minion",
+    "ability": "If you publicly claim to be the Goblin when nominated & are executed that day, your team wins."
+  },
+  {
+    "id": "mastermind_haveyouevertriedthisone",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/HaveYouEverTriedThisOne/mastermind_haveyouevertriedthisone.png",
+    "name": "Mastermind",
+    "team": "minion",
+    "ability": "If the Demon dies by execution (ending the game), play for 1 more day. If a player is then executed, their team loses."
+  },
+  {
+    "id": "imp_haveyouevertriedthisone",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/HaveYouEverTriedThisOne/imp_haveyouevertriedthisone.png",
+    "otherNightReminder": "The Imp points to a player. That player dies. If the Imp chose themselves: Replace the character of 1 alive minion with a spare Imp token. Show the 'You are' card, then the Imp token.",
+    "reminders": [
+      "Dead"
+    ],
+    "name": "Imp",
+    "team": "demon",
+    "ability": "Each night*, choose a player: they die. If you kill yourself this way, a Minion becomes the Imp.",
+    "otherNight": 3
+  },
+  {
+    "id": "legion_haveyouevertriedthisone",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/HaveYouEverTriedThisOne/legion_haveyouevertriedthisone.png",
+    "otherNightReminder": "Choose a player, that player dies.",
+    "reminders": [
+      "Dead",
+      "About to die"
+    ],
+    "setup": true,
+    "name": "Legion",
+    "team": "demon",
+    "ability": "Each night*, a player might die. Executions fail if only evil voted. You register as a Minion too. [Most players are Legion]",
+    "otherNight": 11
+  }
+]
