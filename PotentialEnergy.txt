@@ -1,0 +1,1 @@
+[{"id":"_meta","author":"Fletcher Grant","name":"Potential Energy"},"investigator","pixie","king","oracle","undertaker","seamstress","philosopher","cannibal","farmer","ravenkeeper","sage","choirboy","banshee","golem","saint","barber","damsel","poisoner","assassin","boomdandy","mastermind","po","bureaucrat","apprentice","beggar","gnome","sentinel"]

@@ -1,0 +1,370 @@
+
+import java.io.IOException;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.Arrays;
+import java.util.Random;
+
+import org.json.simple.JSONObject;
+import org.json.simple.JSONArray;
+import org.json.simple.parser.ParseException;
+import org.json.simple.parser.JSONParser;
+
+
+
+
+class Main {
+
+    private static Random rand = new Random();
+    private static int iRand;
+    private static final String[] teams = new String[]{"townsfolk", "outsider", "minion", "demon"};
+    private static int t;
+
+    public static void main(String[] args) throws FileNotFoundException, IOException, ParseException {
+
+        String test = new String("");
+        String scriptName = Storyteller.readAsk("What is the name of your script json? " +
+                "Program will break if you put it in wrong.");
+        if (!(scriptName.substring(scriptName.length() - 5, scriptName.length()).equals(".json"))) {
+            scriptName += ".json";
+        }
+
+        Object oScript = new JSONParser().parse(new FileReader(scriptName));
+        JSONArray aScript = (JSONArray) oScript;
+
+
+        String[][] characters = new String[4][1];
+        int lastCut = 1;
+        String[] charactArr = new String[aScript.size()];
+        for (int i = 1; i < aScript.size(); i++) {
+            String charname = (String) (((JSONObject) aScript.get(i)).get("name"));
+            charactArr[i] = charname;
+            if ( !(((String) (((JSONObject) aScript.get(i)).get("team"))).equals(teams[t]))) {
+                characters[t] = Arrays.copyOfRange(charactArr, lastCut, i);
+                t++;
+                lastCut = i;
+            }
+        }
+        characters[t] = Arrays.copyOfRange(charactArr, lastCut, charactArr.length);
+
+
+
+        boolean hunts0 = false;
+        if (Storyteller.search(characters[0], "Huntsman")) {
+            String answer = Storyteller.readAsk("You have Huntsman in your script. " +
+                    "Would you like Huntsman to be included in 0 outsider setups?");
+            if (answer.equals("y") || answer.equals("yes")) {
+                hunts0 = true;
+            }
+        }
+
+        int athPercent = 0;
+        boolean athDupe = false;
+        if (Storyteller.search(characters[0], "Atheist")) {
+            int answerNum = Storyteller.ask("You have Atheist in your script. " +
+                    "What percentage of games would you like to be Atheist games?", 0, 100);
+            athPercent = answerNum;
+            String answer = Storyteller.readAsk("Allow Atheist setups to have duplicate characters?");
+            if (answer.equals("y") || answer.equals("yes")) {
+                athDupe = true;
+            }
+        }
+
+
+
+
+
+
+        while (test.equals("")) {
+            if (rand.nextInt(100) < athPercent) {
+                String[][] setup = makeAthSetup(characters, athDupe);
+                printSetup(setup, characters);
+            } else {
+                String[][] setup = makeSetup(characters, hunts0);
+                printSetup(setup, characters);
+            }
+
+        }
+
+    }
+
+    public static String[][] makeAthSetup(String[][] characters, boolean athDupe) {
+
+        String[][] setup = new String[4][0];
+
+        int playCount = Storyteller.ask("How many players?", 5, 15);
+
+        String[] goodChars = new String[characters[0].length + characters[1].length];
+
+        for (int i = 0; i < goodChars.length; i++) {
+            if (i < characters[0].length) {
+                goodChars[i] = characters[0][i];
+            } else {
+                goodChars[i] = characters[1][i - characters[0].length];
+            }
+        }
+
+        int tCount = 1; //The Atheist added in at the start
+        int oCount = 0;
+
+        String[] gArr = new String[playCount];
+        Arrays.fill(gArr, "");
+        gArr[0] = "Atheist";
+        for (int i = 1; i < playCount; i++) {
+            iRand = rand.nextInt(goodChars.length);
+            while ((Storyteller.search(gArr, goodChars[iRand])) && !athDupe) {
+                iRand = rand.nextInt(goodChars.length);
+            }
+            gArr[i] = goodChars[iRand];
+            if (Storyteller.search(characters[0], gArr[i])) {
+                tCount ++;
+            } else {
+                oCount ++;
+            }
+        }
+
+        int to = 0;
+        int ou = 0;
+        String[] tArr = new String[tCount];
+        String[] oArr = new String[oCount];
+        for (int i = 0; i < gArr.length; i++) {
+            if (Storyteller.search(characters[0], gArr[i])) {
+                tArr[to] = gArr[i];
+                to++;
+            } else {
+                oArr[ou] = gArr[i];
+                ou++;
+            }
+        }
+
+        setup[0] = tArr;
+        setup[1] = oArr;
+
+        return setup;
+
+
+    }
+
+    public static String[][] makeSetup(String[][] characters, boolean hunts0) {
+
+        String[][] setup = new String[4][0];
+
+        int playCount = Storyteller.ask("How many players?", 5, 15);
+        Storyteller.read(Integer.toString(playCount));
+        int tCount = 3 + (playCount - 4) / 3 * 2;
+        int oCount = (playCount - 7) % 3;
+        int mCount = (playCount - 4) / 3;
+        if (playCount < 7) {
+            tCount = 3;
+            oCount = playCount - 5;
+            mCount = 1;
+        }
+        int dCount = 1;
+
+        int[] baseCount = new int[]{tCount, oCount, mCount, dCount}; //for reference later
+
+        Storyteller.read("T: " + Integer.toString(tCount) + "\nO: "
+                + Integer.toString(oCount) + "\nM: " + Integer.toString(mCount)
+                + "\nD: " + Integer.toString(dCount));
+
+//        String[] goodChars = new String[characters[0].length + characters[1].length];
+//        for (int i = 0; i < goodChars.length; i++) {
+//            if (i < characters[0].length) {
+//                goodChars[i] = characters[0][i];
+//            } else {
+//                goodChars[i] = characters[1][i - characters[0].length];
+//            }
+//        }
+
+
+        String[] dArr = new String[dCount];
+        Arrays.fill(dArr, "");
+        for (int i = 0; i < dCount; i++) {
+            iRand = rand.nextInt(characters[3].length);
+            while ((Storyteller.search(dArr, characters[3][iRand]))) {
+                iRand = rand.nextInt(characters[3].length);
+            }
+
+            if (characters[3][iRand].equals("Vigormortis")) {
+                if (oCount > 0) {
+                    oCount -= 1;
+                    tCount += 1;
+                }
+            }
+            if (characters[3][iRand].equals("Fang Gu")) {
+                if (tCount > 0) {
+                    oCount += 1;
+                    tCount -= 1;
+                }
+            }
+            if (characters[3][iRand].equals("Lil' Monsta")) {
+                mCount += 1;
+            }
+            if (characters[3][iRand].equals("Lord of Typhon")) {
+                mCount += 1;
+                if (rand.nextInt(tCount + oCount) < oCount) {
+                    oCount -= 1;
+                } else {
+                    tCount -= 1;
+                }
+            }
+            if (characters[3][iRand].equals("Riot")) {
+                mCount = 0;
+            }
+
+            dArr[i] = characters[3][iRand];
+        }
+
+        String[] mArr = new String[mCount];
+        Arrays.fill(mArr, "");
+        for (int i = 0; i < mCount; i++) {
+            iRand = rand.nextInt(characters[2].length);
+            if (i == 3 && characters[2].length == 4 && Storyteller.search(characters[2], "Summoner")) {
+                Storyteller.read("Put more minions on your script, idiot!");
+            }
+            while ((Storyteller.search(mArr, characters[2][iRand]))
+                    || (characters[2][iRand].equals("Summoner") && mCount > baseCount[2])) {
+                iRand = rand.nextInt(characters[2].length);
+            }
+            mArr[i] = characters[2][iRand];
+            if (characters[2][iRand].equals("Baron")) {
+                oCount += 2;
+                tCount -= 2;
+            }
+            if (characters[2][iRand].equals("Godfather")) {
+                if (rand.nextInt(2) == 1 || oCount == 0) {
+                    oCount += 1;
+                    tCount -= 1;
+                } else if (oCount > 0) {
+                    oCount -= 1;
+                    tCount += 1;
+                }
+            }
+            if (characters[2][iRand].equals("Marionette")) {
+                tCount ++;
+
+                //Marionette wiki says to only add a townsfolk token, but if it could add outsiders I'd do this:
+//                if (rand.nextInt(characters[0].length + characters[1].length) < characters[0].length) {
+//                    tCount += 1;
+//                } else {
+//                    oCount += 1;
+//                }
+            }
+            if (characters[2][iRand].equals("Summoner")) {
+                //reset demon modifications, add extra townsfolk
+                tCount = baseCount[0] + 1;
+                oCount = baseCount[1];
+                dCount = 0;
+
+                dArr = new String[0];
+
+                //Same applies to Summoner as to Marionette
+            }
+        }
+        if (tCount < 0) {
+            tCount = 0;
+        }
+        if (Storyteller.search(mArr, "Summoner")) {
+            mCount = baseCount[2];
+            if (mArr.length > mCount) {
+                mArr = Arrays.copyOfRange(mArr, 0, mArr.length - 1);
+            }
+        }
+
+        int vi = 0; //Village Idiot counter
+        String[] tArr = new String[tCount];
+        Arrays.fill(tArr, "");
+        for (int i = 0; i < tCount; i++) {
+            iRand = rand.nextInt(characters[0].length);
+            while ((Storyteller.search(tArr, characters[0][iRand]) && (!characters[0][iRand].equals("Village Idiot") || vi == 3))
+                    || (characters[0][iRand].equals("Huntsman") && !hunts0 && oCount == 0)
+                    || characters[0][iRand].equals("Atheist")) {
+                iRand = rand.nextInt(characters[0].length);
+            }
+            tArr[i] = characters[0][iRand];
+            if (characters[0][iRand].equals("Village Idiot")) {
+                vi++;
+            }
+
+            //Not sure a better way to repeat a for loop early, so I'm just replacing it at end
+            if (Storyteller.search(tArr, "Choirboy") && !Storyteller.search(tArr, "King")) {
+                tArr[i] = "King";
+            }
+        }
+        if (Storyteller.search(tArr, "Balloonist")) {
+            if (rand.nextInt(2) == 1 && oCount < characters[1].length) {
+                oCount += 1;
+                tCount -= 1;
+                if (!tArr[tArr.length - 1].equals("Balloonist")) {
+                    tArr = Arrays.copyOfRange(tArr, 0, tArr.length - 1);
+                } else {
+                    tArr = Arrays.copyOfRange(tArr, 1, tArr.length);
+                }
+            }
+        }
+
+        String[] oArr = new String[oCount];
+        Arrays.fill(oArr, "");
+        for (int i = 0; i < oCount; i++) {
+            iRand = rand.nextInt(characters[1].length);
+            while ((Storyteller.search(oArr, characters[1][iRand]))) {
+                iRand = rand.nextInt(characters[1].length);
+            }
+            oArr[i] = characters[1][iRand];
+            if (Storyteller.search(tArr, "Huntsman") && !Storyteller.search(oArr, "Damsel")) {
+                oArr[i] = "Damsel";
+            }
+        }
+
+        setup[0] = tArr;
+        setup[1] = oArr;
+        setup[2] = mArr;
+        setup[3] = dArr;
+
+
+        return setup;
+    }
+
+    public static void printSetup(String[][] setup, String[][] characters) {
+        int t = 0;
+
+        for (String[] team : setup) {
+            String teamChars = new String(teams[t]);
+            if (t == 1 || t == 2) {
+                teamChars += "s";
+            }
+            teamChars += ": ";
+            for (String charName : team) {
+                teamChars += charName + ", ";
+            }
+            Storyteller.read(teamChars);
+            t++;
+        }
+
+        if (Storyteller.search(setup[1], "Drunk")) {
+            iRand = rand.nextInt(characters[0].length);
+            while ((Storyteller.search(setup[0], characters[0][iRand]))) {
+                iRand = rand.nextInt(characters[0].length);
+            }
+            String drunkSees = characters[0][iRand];
+            Storyteller.read("The Drunk sees themself as the " + drunkSees);
+        }
+
+        if (Storyteller.search(setup[1], "Lunatic")) {
+            iRand = rand.nextInt(characters[3].length);
+            while (characters[3][iRand].equals("Lil' Monsta")) {
+                iRand = rand.nextInt(characters[3].length);
+            }
+            String lunaticSees = characters[3][iRand];
+            Storyteller.read("The Lunatic sees themself as the " + lunaticSees);
+        }
+
+        if (Storyteller.search(setup[2], "Evil Twin")) {
+            //String[] goodChars = Array.
+            iRand = rand.nextInt(setup[0].length);
+            String goodTwin = setup[0][iRand];
+            Storyteller.read("The Good Twin is the " + goodTwin);
+        }
+    }
+}
+

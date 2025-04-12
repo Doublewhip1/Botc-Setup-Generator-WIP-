@@ -1,0 +1,281 @@
+[
+  {
+    "id": "_meta",
+    "name": "New Edition",
+    "almanac": "https://www.bloodstar.xyz/p/Doublewhip/RoseGlassesWIP/almanac.html"
+  },
+  {
+    "id": "steward_roseglasseswip",
+    "name": "Steward",
+    "team": "townsfolk"
+  },
+  {
+    "id": "noble_roseglasseswip",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/RoseGlassesWIP/noble_roseglasseswip.png",
+    "firstNightReminder": "Point to 3 players including one evil player, in no particular order.",
+    "reminders": [
+      "Seen"
+    ],
+    "name": "Noble",
+    "team": "townsfolk",
+    "ability": "You start knowing 3 players, 1 and only 1 of which is evil.",
+    "firstNight": 16
+  },
+  {
+    "id": "washerwoman_roseglasseswip",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/RoseGlassesWIP/washerwoman_roseglasseswip.png",
+    "firstNightReminder": "Show the character token of a Townsfolk in play. Point to two players, one of which is that character.",
+    "reminders": [
+      "Townsfolk",
+      "Wrong"
+    ],
+    "name": "Washerwoman",
+    "team": "townsfolk",
+    "ability": "You start knowing that 1 of 2 players is a particular Townsfolk.",
+    "firstNight": 11
+  },
+  {
+    "id": "pixie_roseglasseswip",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/RoseGlassesWIP/pixie_roseglasseswip.png",
+    "firstNightReminder": "Show the Pixie 1 in-play Townsfolk character token.",
+    "reminders": [
+      "Mad",
+      "Has ability"
+    ],
+    "name": "Pixie",
+    "team": "townsfolk",
+    "ability": "You start knowing 1 in-play Townsfolk. If you were mad that you were this character, you gain their ability when they die.",
+    "firstNight": 17
+  },
+  {
+    "id": "empath_roseglasseswip",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/RoseGlassesWIP/empath_roseglasseswip.png",
+    "firstNightReminder": "Show the finger signal (0, 1, 2) for the number of evil alive neighbours of the Empath.",
+    "otherNightReminder": "Show the finger signal (0, 1, 2) for the number of evil neighbours.",
+    "name": "Empath",
+    "team": "townsfolk",
+    "ability": "Each night, you learn how many of your 2 alive neighbours are evil.",
+    "firstNight": 12,
+    "otherNight": 2
+  },
+  {
+    "id": "balloonist_roseglasseswip",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/RoseGlassesWIP/balloonist_roseglasseswip.png",
+    "firstNightReminder": "Choose a character type. Point to a player whose character is of that type. Place the Balloonist's Seen reminder next to that character.",
+    "otherNightReminder": "Choose a character type that does not yet have a Seen reminder next to a character of that type. Point to a player whose character is of that type, if there are any. Place the Balloonist's Seen reminder next to that character.",
+    "reminders": [
+      "Seen Townsfolk",
+      "Seen Outsider",
+      "Seen Minion",
+      "Seen Demon",
+      "Seen Traveller"
+    ],
+    "setup": true,
+    "name": "Balloonist",
+    "team": "townsfolk",
+    "ability": "Each night, you learn 1 player of each character type, until there are no more types to learn. [+1 Outsider]",
+    "firstNight": 19,
+    "otherNight": 9
+  },
+  {
+    "id": "general_roseglasseswip",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/RoseGlassesWIP/general_roseglasseswip.png",
+    "firstNightReminder": "Show the General thumbs up for good winning, thumbs down for evil winning or thumb to the side for neither.",
+    "otherNightReminder": "Show the General thumbs up for good winning, thumbs down for evil winning or thumb to the side for neither.",
+    "name": "General",
+    "team": "townsfolk",
+    "ability": "Each night, you learn which alignment the Storyteller believes is winning: good, evil, or neither.",
+    "firstNight": 18,
+    "otherNight": 8
+  },
+  {
+    "id": "undertaker_roseglasseswip",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/RoseGlassesWIP/undertaker_roseglasseswip.png",
+    "otherNightReminder": "If a player was executed today: Show that player’s character token.",
+    "reminders": [
+      "Executed"
+    ],
+    "name": "Undertaker",
+    "team": "townsfolk",
+    "ability": "Each night*, you learn which character died by execution today.",
+    "otherNight": 3
+  },
+  {
+    "id": "savant_roseglasseswip",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/RoseGlassesWIP/savant_roseglasseswip.png",
+    "name": "Savant",
+    "team": "townsfolk",
+    "ability": "Each day, you may visit the Storyteller to learn 2 things in private: 1 is true & 1 is false."
+  },
+  {
+    "id": "fisherman_roseglasseswip",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/RoseGlassesWIP/fisherman_roseglasseswip.png",
+    "reminders": [
+      "No ability"
+    ],
+    "name": "Fisherman",
+    "team": "townsfolk",
+    "ability": "Once per game, during the day, visit the Storyteller for some advice to help you win."
+  },
+  {
+    "id": "slayer_roseglasseswip",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/RoseGlassesWIP/slayer_roseglasseswip.png",
+    "reminders": [
+      "No ability"
+    ],
+    "name": "Slayer",
+    "team": "townsfolk",
+    "ability": "Once per game, during the day, publicly choose a player: if they are the Demon, they die."
+  },
+  {
+    "id": "amnesiac_roseglasseswip",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/RoseGlassesWIP/amnesiac_roseglasseswip.png",
+    "firstNightReminder": "Decide the Amnesiac's entire ability. If the Amnesiac's ability causes them to wake tonight: Wake the Amnesiac and run their ability.",
+    "otherNightReminder": "If the Amnesiac's ability causes them to wake tonight: Wake the Amnesiac and run their ability.",
+    "reminders": [
+      "?"
+    ],
+    "name": "Amnesiac",
+    "team": "townsfolk",
+    "ability": "You do not know what your ability is. Each day, privately guess what it is: you learn how accurate you are.",
+    "firstNight": 20,
+    "otherNight": 10
+  },
+  {
+    "id": "atheist_roseglasseswip",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/RoseGlassesWIP/atheist_roseglasseswip.png",
+    "setup": true,
+    "name": "Atheist",
+    "team": "townsfolk",
+    "ability": "The Storyteller can break the game rules & if executed, good wins, even if you are dead. [No evil characters]"
+  },
+  {
+    "id": "poppygrower_roseglasseswip",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/RoseGlassesWIP/poppygrower_roseglasseswip.png",
+    "firstNightReminder": "Do not inform the Demon/Minions who each other are",
+    "otherNightReminder": "If the Poppy Grower has died, show the Minions/Demon who each other are.",
+    "reminders": [
+      "Evil wakes"
+    ],
+    "name": "Poppy Grower",
+    "team": "townsfolk",
+    "ability": "Minions & Demons do not know each other. If you die, they learn who each other are that night.",
+    "firstNight": 21,
+    "otherNight": 11
+  },
+  {
+    "id": "lunatic_roseglasseswip",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/RoseGlassesWIP/lunatic_roseglasseswip.png",
+    "firstNightReminder": "If 7 or more players: Show the Lunatic a number of arbitrary 'Minions', players equal to the number of Minions in play. Show 3 character tokens of arbitrary good characters. If the token received by the Lunatic is a Demon that would wake tonight: Allow the Lunatic to do the Demon actions. Place their 'attack' markers. Wake the Demon. Show the Demon’s real character token. Show them the Lunatic player. If the Lunatic attacked players: Show the real demon each marked player. Remove any Lunatic 'attack' markers.",
+    "otherNightReminder": "Allow the Lunatic to do the actions of the Demon. Place their 'attack' markers. If the Lunatic selected players: Wake the Demon. Show the 'attack' marker, then point to each marked player. Remove any Lunatic 'attack' markers.",
+    "reminders": [
+      "Attack 1",
+      "Attack 2",
+      "Attack 3"
+    ],
+    "name": "Lunatic",
+    "team": "outsider",
+    "ability": "You think you are a Demon, but you are not. The Demon knows who you are & who you choose at night.",
+    "firstNight": 14,
+    "otherNight": 5
+  },
+  {
+    "id": "drunk_roseglasseswip",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/RoseGlassesWIP/drunk_roseglasseswip.png",
+    "remindersGlobal": [
+      "Drunk"
+    ],
+    "setup": true,
+    "name": "Drunk",
+    "team": "outsider",
+    "ability": "You do not know you are the Drunk. You think you are a Townsfolk character, but you are not."
+  },
+  {
+    "id": "recluse_roseglasseswip",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/RoseGlassesWIP/recluse_roseglasseswip.png",
+    "name": "Recluse",
+    "team": "outsider",
+    "ability": "You might register as evil & as a Minion or Demon, even if dead."
+  },
+  {
+    "id": "barber_roseglasseswip",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/RoseGlassesWIP/barber_roseglasseswip.png",
+    "otherNightReminder": "If the Barber died today: Wake the Demon. Show the 'This character selected you' card, then Barber token. The Demon either shows a 'no' head signal, or points to 2 players. If they chose players: Swap the character tokens. Wake each player. Show 'You are', then their new character token.",
+    "reminders": [
+      "Haircuts tonight"
+    ],
+    "name": "Barber",
+    "team": "outsider",
+    "ability": "If you died today or tonight, the Demon may choose 2 players (not another Demon) to swap characters.",
+    "otherNight": 6
+  },
+  {
+    "id": "godfather_roseglasseswip",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/RoseGlassesWIP/godfather_roseglasseswip.png",
+    "firstNightReminder": "Show each of the Outsider tokens in play.",
+    "otherNightReminder": "If an Outsider died today: The Godfather points to a player. That player dies.",
+    "reminders": [
+      "Died today",
+      "Dead"
+    ],
+    "setup": true,
+    "name": "Godfather",
+    "team": "minion",
+    "ability": "You start knowing which Outsiders are in play. If 1 died today, choose a player tonight: they die. [−1 or +1 Outsider]",
+    "firstNight": 23,
+    "otherNight": 12
+  },
+  {
+    "id": "spy_roseglasseswip",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/RoseGlassesWIP/spy_roseglasseswip.png",
+    "firstNightReminder": "Show the Grimoire to the Spy for as long as they need.",
+    "otherNightReminder": "Show the Grimoire to the Spy for as long as they need.",
+    "name": "Spy",
+    "team": "minion",
+    "ability": "Each night, you see the Grimoire. You might register as good & as a Townsfolk or Outsider, even if dead.",
+    "firstNight": 13,
+    "otherNight": 4
+  },
+  {
+    "id": "harpy_roseglasseswip",
+    "name": "Harpy",
+    "team": "minion"
+  },
+  {
+    "id": "witch_roseglasseswip",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/RoseGlassesWIP/witch_roseglasseswip.png",
+    "firstNightReminder": "The Witch points to a player. If that player nominates tomorrow they die immediately.",
+    "otherNightReminder": "If there are 4 or more players alive: The Witch points to a player. If that player nominates tomorrow they die immediately.",
+    "reminders": [
+      "Cursed"
+    ],
+    "name": "Witch",
+    "team": "minion",
+    "ability": "Each night, choose a player: if they nominate tomorrow, they die. If just 3 players live, you lose this ability.",
+    "firstNight": 15,
+    "otherNight": 7
+  },
+  {
+    "id": "marionette_roseglasseswip",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/RoseGlassesWIP/marionette_roseglasseswip.png",
+    "firstNightReminder": "Select one of the good players next to the Demon and place the Is the Marionette reminder token. Wake the Demon and show them the Marionette.",
+    "remindersGlobal": [
+      "Is the Marionette"
+    ],
+    "setup": true,
+    "name": "Marionette",
+    "team": "minion",
+    "ability": "You think you are a good character but you are not. The Demon knows who you are. [You neighbour the Demon]",
+    "firstNight": 22
+  },
+  {
+    "id": "lordoftyphon_roseglasseswip",
+    "name": "Lord of Typhon",
+    "team": "demon"
+  },
+  {
+    "id": "yaggababble_roseglasseswip",
+    "name": "Yaggababble",
+    "team": "demon"
+  }
+]

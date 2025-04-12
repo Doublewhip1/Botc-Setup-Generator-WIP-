@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Storyteller
+comment1.params=line
+comment1.target=void\ read(java.lang.String)
+comment2.params=line
+comment2.target=java.lang.String\ readAsk(java.lang.String)
+comment3.params=question\ options
+comment3.target=java.lang.String\ ask(java.lang.String,\ java.lang.String[])
+comment4.params=question\ options\ valid\ incorrect
+comment4.target=java.lang.String\ ask(java.lang.String,\ java.lang.String[],\ java.lang.String[],\ java.lang.String)
+comment5.params=question\ options\ valid\ incorrect
+comment5.target=int\ ask(java.lang.String,\ java.lang.String[],\ int[],\ java.lang.String)
+comment6.params=question\ min\ max
+comment6.target=int\ ask(java.lang.String,\ int,\ int)
+comment7.params=story\ lineStart\ lines
+comment7.target=void\ tell(java.lang.String[],\ int,\ int)
+numComments=8

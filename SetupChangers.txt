@@ -1,0 +1,303 @@
+[
+  {
+    "id": "_meta",
+    "name": "New Edition",
+    "almanac": "https://www.bloodstar.xyz/p/Doublewhip/SetupChangers/almanac.html"
+  },
+  {
+    "id": "grandmother_setupchangers",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/SetupChangers/grandmother_setupchangers.png",
+    "firstNightReminder": "Show the marked character token. Point to the marked player.",
+    "otherNightReminder": "If the Grandmother’s grandchild was killed by the Demon tonight: The Grandmother dies.",
+    "reminders": [
+      "Grandchild"
+    ],
+    "name": "Grandmother",
+    "team": "townsfolk",
+    "ability": "You start knowing a good player & their character. If the Demon kills them, you die too.",
+    "firstNight": 11,
+    "otherNight": 2
+  },
+  {
+    "id": "bountyhunter_setupchangers",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/SetupChangers/bountyhunter_setupchangers.png",
+    "firstNightReminder": "Point to 1 evil player. Wake the townsfolk who is evil and show them the 'You are' card and the thumbs down evil sign.",
+    "otherNightReminder": "If the known evil player has died, point to another evil player. ",
+    "reminders": [
+      "Known"
+    ],
+    "setup": true,
+    "name": "Bounty Hunter",
+    "team": "townsfolk",
+    "ability": "You start knowing 1 evil player. If the player you know dies, you learn another evil player tonight. [1 Townsfolk is evil]",
+    "firstNight": 15,
+    "otherNight": 5
+  },
+  {
+    "id": "pixie_setupchangers",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/SetupChangers/pixie_setupchangers.png",
+    "firstNightReminder": "Show the Pixie 1 in-play Townsfolk character token.",
+    "reminders": [
+      "Mad",
+      "Has ability"
+    ],
+    "name": "Pixie",
+    "team": "townsfolk",
+    "ability": "You start knowing 1 in-play Townsfolk. If you were mad that you were this character, you gain their ability when they die.",
+    "firstNight": 16
+  },
+  {
+    "id": "king_setupchangers",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/SetupChangers/king_setupchangers.png",
+    "firstNightReminder": "Wake the Demon, show them the 'This character selected you' card, show the King token and point to the King player.",
+    "otherNightReminder": "If there are more dead than living, show the King a character token of a living player.",
+    "name": "King",
+    "team": "townsfolk",
+    "ability": "Each night, if the dead outnumber the living, you learn 1 alive character. The Demon knows who you are.",
+    "firstNight": 17,
+    "otherNight": 6
+  },
+  {
+    "id": "balloonist_setupchangers",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/SetupChangers/balloonist_setupchangers.png",
+    "firstNightReminder": "Choose a character type. Point to a player whose character is of that type. Place the Balloonist's Seen reminder next to that character.",
+    "otherNightReminder": "Choose a character type that does not yet have a Seen reminder next to a character of that type. Point to a player whose character is of that type, if there are any. Place the Balloonist's Seen reminder next to that character.",
+    "reminders": [
+      "Seen Townsfolk",
+      "Seen Outsider",
+      "Seen Minion",
+      "Seen Demon",
+      "Seen Traveller"
+    ],
+    "setup": true,
+    "name": "Balloonist",
+    "team": "townsfolk",
+    "ability": "Each night, you learn 1 player of each character type, until there are no more types to learn. [+1 Outsider]",
+    "firstNight": 18,
+    "otherNight": 7
+  },
+  {
+    "id": "amnesiac_setupchangers",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/SetupChangers/amnesiac_setupchangers.png",
+    "firstNightReminder": "Decide the Amnesiac's entire ability. If the Amnesiac's ability causes them to wake tonight: Wake the Amnesiac and run their ability.",
+    "otherNightReminder": "If the Amnesiac's ability causes them to wake tonight: Wake the Amnesiac and run their ability.",
+    "reminders": [
+      "?"
+    ],
+    "name": "Amnesiac",
+    "team": "townsfolk",
+    "ability": "You do not know what your ability is. Each day, privately guess what it is: you learn how accurate you are.",
+    "firstNight": 19,
+    "otherNight": 8
+  },
+  {
+    "id": "engineer_setupchangers",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/SetupChangers/engineer_setupchangers.png",
+    "firstNightReminder": "The Engineer shows a 'no' head signal, or points to a Demon or points to the relevant number of Minions. If the Engineer chose characters, replace the Demon or Minions with the choices, then wake the relevant players and show them the You are card and the relevant character tokens.",
+    "otherNightReminder": "The Engineer shows a 'no' head signal, or points to a Demon or points to the relevant number of Minions. If the Engineer chose characters, replace the Demon or Minions with the choices, then wake the relevant players and show them the 'You are' card and the relevant character tokens.",
+    "reminders": [
+      "No ability"
+    ],
+    "name": "Engineer",
+    "team": "townsfolk",
+    "ability": "Once per game, at night, choose which Minions or which Demon is in play.",
+    "firstNight": 20,
+    "otherNight": 9
+  },
+  {
+    "id": "huntsman_setupchangers",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/SetupChangers/huntsman_setupchangers.png",
+    "firstNightReminder": "The Huntsman shakes their head 'no' or points to a player. If they point to the Damsel, wake that player, show the 'You are' card and a not-in-play character token.",
+    "otherNightReminder": "The Huntsman shakes their head 'no' or points to a player. If they point to the Damsel, wake that player, show the 'You are' card and a not-in-play character token.",
+    "reminders": [
+      "No ability"
+    ],
+    "setup": true,
+    "name": "Huntsman",
+    "team": "townsfolk",
+    "ability": "Once per game, at night, choose a living player: the Damsel, if chosen, becomes a not-in-play Townsfolk. [+the Damsel]",
+    "firstNight": 21,
+    "otherNight": 10
+  },
+  {
+    "id": "alchemist_setupchangers",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/SetupChangers/alchemist_setupchangers.png",
+    "firstNightReminder": "Show the Alchemist a not-in-play Minion token",
+    "remindersGlobal": [
+      "Is the Alchemist"
+    ],
+    "name": "Alchemist",
+    "team": "townsfolk",
+    "ability": "You have a not-in-play Minion ability.",
+    "firstNight": 22
+  },
+  {
+    "id": "choirboy_setupchangers",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/SetupChangers/choirboy_setupchangers.png",
+    "otherNightReminder": "If the King was killed by the Demon, wake the Choirboy and point to the Demon player.",
+    "setup": true,
+    "name": "Choirboy",
+    "team": "townsfolk",
+    "ability": "If the Demon kills the King, you learn which player is the Demon. [+ the King]",
+    "otherNight": 11
+  },
+  {
+    "id": "villageidiot_setupchangers",
+    "name": "Village Idiot",
+    "team": "townsfolk"
+  },
+  {
+    "id": "atheist_setupchangers",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/SetupChangers/atheist_setupchangers.png",
+    "setup": true,
+    "name": "Atheist",
+    "team": "townsfolk",
+    "ability": "The Storyteller can break the game rules & if executed, good wins, even if you are dead. [No evil characters]"
+  },
+  {
+    "id": "lunatic_setupchangers",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/SetupChangers/lunatic_setupchangers.png",
+    "firstNightReminder": "If 7 or more players: Show the Lunatic a number of arbitrary 'Minions', players equal to the number of Minions in play. Show 3 character tokens of arbitrary good characters. If the token received by the Lunatic is a Demon that would wake tonight: Allow the Lunatic to do the Demon actions. Place their 'attack' markers. Wake the Demon. Show the Demon’s real character token. Show them the Lunatic player. If the Lunatic attacked players: Show the real demon each marked player. Remove any Lunatic 'attack' markers.",
+    "otherNightReminder": "Allow the Lunatic to do the actions of the Demon. Place their 'attack' markers. If the Lunatic selected players: Wake the Demon. Show the 'attack' marker, then point to each marked player. Remove any Lunatic 'attack' markers.",
+    "reminders": [
+      "Attack 1",
+      "Attack 2",
+      "Attack 3"
+    ],
+    "name": "Lunatic",
+    "team": "outsider",
+    "ability": "You think you are a Demon, but you are not. The Demon knows who you are & who you choose at night.",
+    "firstNight": 12,
+    "otherNight": 3
+  },
+  {
+    "id": "puzzlemaster_setupchangers",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/SetupChangers/puzzlemaster_setupchangers.png",
+    "reminders": [
+      "Drunk",
+      "Guess used"
+    ],
+    "name": "Puzzlemaster",
+    "team": "outsider",
+    "ability": "1 player is drunk, even if you die. If you guess (once) who it is, learn the Demon player, but guess wrong & get false info."
+  },
+  {
+    "id": "drunk_setupchangers",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/SetupChangers/drunk_setupchangers.png",
+    "remindersGlobal": [
+      "Drunk"
+    ],
+    "setup": true,
+    "name": "Drunk",
+    "team": "outsider",
+    "ability": "You do not know you are the Drunk. You think you are a Townsfolk character, but you are not."
+  },
+  {
+    "id": "damsel_setupchangers",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/SetupChangers/damsel_setupchangers.png",
+    "firstNightReminder": "Wake all the Minions, show them the 'This character selected you' card and the Damsel token.",
+    "otherNightReminder": "If selected by the Huntsman, wake the Damsel, show 'You are' card and a not-in-play Townsfolk token.",
+    "reminders": [
+      "Guess used"
+    ],
+    "name": "Damsel",
+    "team": "outsider",
+    "ability": "All Minions know you are in play. If a Minion publicly guesses you (once), your team loses.",
+    "firstNight": 23,
+    "otherNight": 12
+  },
+  {
+    "id": "summoner_setupchangers",
+    "name": "Summoner",
+    "team": "minion"
+  },
+  {
+    "id": "eviltwin_setupchangers",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/SetupChangers/eviltwin_setupchangers.png",
+    "firstNightReminder": "Wake the Evil Twin and their twin. Confirm that they have acknowledged each other. Point to the Evil Twin. Show their Evil Twin token to the twin player. Point to the twin. Show their character token to the Evil Twin player.",
+    "reminders": [
+      "Twin"
+    ],
+    "name": "Evil Twin",
+    "team": "minion",
+    "ability": "You & an opposing player know each other. If the good player is executed, evil wins. Good can't win if you both live.",
+    "firstNight": 14
+  },
+  {
+    "id": "godfather_setupchangers",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/SetupChangers/godfather_setupchangers.png",
+    "firstNightReminder": "Show each of the Outsider tokens in play.",
+    "otherNightReminder": "If an Outsider died today: The Godfather points to a player. That player dies.",
+    "reminders": [
+      "Died today",
+      "Dead"
+    ],
+    "setup": true,
+    "name": "Godfather",
+    "team": "minion",
+    "ability": "You start knowing which Outsiders are in play. If 1 died today, choose a player tonight: they die. [−1 or +1 Outsider]",
+    "firstNight": 13,
+    "otherNight": 4
+  },
+  {
+    "id": "marionette_setupchangers",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/SetupChangers/marionette_setupchangers.png",
+    "firstNightReminder": "Select one of the good players next to the Demon and place the Is the Marionette reminder token. Wake the Demon and show them the Marionette.",
+    "remindersGlobal": [
+      "Is the Marionette"
+    ],
+    "setup": true,
+    "name": "Marionette",
+    "team": "minion",
+    "ability": "You think you are a good character but you are not. The Demon knows who you are. [You neighbour the Demon]",
+    "firstNight": 24
+  },
+  {
+    "id": "lilmonsta_setupchangers",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/SetupChangers/lilmonsta_setupchangers.png",
+    "firstNightReminder": "Wake all Minions together, allow them to vote by pointing at who they want to babysit Lil' Monsta.",
+    "otherNightReminder": "Wake all Minions together, allow them to vote by pointing at who they want to babysit Lil' Monsta. Choose a player, that player dies.",
+    "remindersGlobal": [
+      "Is the Demon",
+      "Dead"
+    ],
+    "setup": true,
+    "name": "Lil' Monsta",
+    "team": "demon",
+    "ability": "Each night, Minions choose who babysits Lil' Monsta's token & \"is the Demon\". A player dies each night*. [+1 Minion]",
+    "firstNight": 25,
+    "otherNight": 13
+  },
+  {
+    "id": "legion_setupchangers",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/SetupChangers/legion_setupchangers.png",
+    "otherNightReminder": "Choose a player, that player dies.",
+    "reminders": [
+      "Dead",
+      "About to die"
+    ],
+    "setup": true,
+    "name": "Legion",
+    "team": "demon",
+    "ability": "Each night*, a player might die. Executions fail if only evil voted. You register as a Minion too. [Most players are Legion]",
+    "otherNight": 14
+  },
+  {
+    "id": "riot_setupchangers",
+    "image": "https://www.bloodstar.xyz/p/Doublewhip/SetupChangers/riot_setupchangers.png",
+    "setup": true,
+    "name": "Riot",
+    "team": "demon",
+    "ability": "Nominees die, but may nominate again immediately (on day 3, they must). After day 3, evil wins. [All Minions are Riot]"
+  },
+  {
+    "id": "lordoftyphon_setupchangers",
+    "name": "Lord of Typhon",
+    "team": "demon"
+  },
+  {
+    "id": "kazali_setupchangers",
+    "name": "Kazali",
+    "team": "demon"
+  }
+]
